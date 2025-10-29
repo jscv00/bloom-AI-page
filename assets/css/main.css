@@ -1596,6 +1596,53 @@ button,
     margin-top: 0;
     padding-top: 0; }
 
+/* Team Members */
+.team-members .team-member {
+  border-top: solid 1px rgba(210, 215, 217, 0.75);
+  margin-top: 2em;
+  padding-top: 2em;
+  text-align: center; }
+  .team-members .team-member .team-image {
+    display: block;
+    margin: 0 auto 1em auto;
+    width: 100px;
+    height: 100px; }
+    .team-members .team-member .team-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover; }
+  .team-members .team-member h4 {
+    margin: 0 0 0.5em 0;
+    font-size: 0.9em;
+    font-weight: 600; }
+  .team-members .team-member .role {
+    display: block;
+    color: #9fa3a6;
+    font-size: 0.8em;
+    margin: 0 0 0.75em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.075em; }
+  .team-members .team-member p {
+    font-size: 0.85em;
+    margin: 0 0 0.75em 0; }
+  .team-members .team-member .github-link {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #f56a6a;
+    border-bottom: 0; }
+    .team-members .team-member .github-link:hover {
+      color: #f67878; }
+    .team-members .team-member .github-link:before {
+      font-family: 'Font Awesome 5 Brands';
+      content: '\f09b';
+      margin-right: 0.5em; }
+  .team-members .team-member:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0; }
+
 /* Features */
 .features {
   display: -moz-flex;
@@ -2215,6 +2262,9 @@ button,
     padding: 0.625em 0; }
     #menu ul a:hover, #menu ul span:hover {
       color: #f56a6a; }
+    #menu ul a.active {
+      color: #f56a6a;
+      font-weight: 600; }
     #menu ul a.opener, #menu ul span.opener {
       -moz-transition: color 0.2s ease-in-out;
       -webkit-transition: color 0.2s ease-in-out;
