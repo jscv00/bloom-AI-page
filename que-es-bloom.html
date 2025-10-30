@@ -21,24 +21,149 @@
           </header>
 
           <!-- Content -->
-          <section>
+          <section>     
             <header class="main">
               <h1>¿Qué es Bloom AI?</h1>
             </header>
 
-            <span class="image main"
-              ><img src="images/pic11.jpg" alt=""
-            /></span>
+            <span class="image main">
+              <img src="images/que-es-imagenes/imagespic11.jpg" alt="BLOOM modelo IA" />
+            </span>
 
             <p>
-              Bloom AI es una plataforma innovadora de inteligencia artificial
-              diseñada específicamente para el ámbito educativo.
+              <strong>BLOOM</strong> (BigScience Large Open-science Open-access Multilingual Language Model) 
+              es un modelo de lenguaje autoregresivo de gran escala, desarrollado por más de 1.000 investigadores 
+              de 70 países en el marco del <em>proyecto BigScience</em>, impulsado por <strong>Hugging Face</strong> 
+              y el <strong>Centro Nacional de Investigación Científica (CNRS)</strong> de Francia.
             </p>
+
             <p>
-              Nuestra misión es transformar la educación mediante el uso de
-              tecnología avanzada de IA, creando experiencias de aprendizaje
-              personalizadas y efectivas para estudiantes de todos los niveles.
+              BLOOM fue entrenado utilizando el supercomputador <strong>Jean Zay</strong>, ubicado en el centro 
+              de cálculo IDRIS del CNRS, con una infraestructura de aproximadamente <strong>384 GPUs NVIDIA A100</strong> 
+              y más de <strong>3.5 meses de entrenamiento continuo</strong>. Este proceso lo convierte en uno de los 
+              proyectos colaborativos de IA más grandes y transparentes de la historia.
             </p>
+
+            <p>
+              El modelo cuenta con <strong>176 mil millones de parámetros</strong> y fue diseñado para trabajar con más de 
+              <strong>46 idiomas humanos</strong> —incluyendo español, inglés, francés, árabe, portugués, chino, hindi y swahili— 
+              y <strong>13 lenguajes de programación</strong> como Python, JavaScript, C++ y SQL. 
+              Su objetivo principal es democratizar la investigación en modelos de lenguaje a gran escala, 
+              ofreciendo un enfoque ético y abierto frente al secretismo de otros modelos como GPT-3 o PaLM.
+            </p>
+
+            <p>
+              A diferencia de modelos cerrados, BLOOM es completamente <strong>abierto y reproducible</strong>: 
+              su código fuente, pesos, dataset de entrenamiento y documentación están disponibles públicamente 
+              a través de <a href="https://huggingface.co/bigscience/bloom" target="_blank">Hugging Face</a>.
+              Esto permite que investigadores, docentes y estudiantes puedan estudiarlo, modificarlo y reutilizarlo 
+              en contextos educativos y científicos.
+            </p>
+
+            <h2>Origen y desarrollo</h2>
+            <p>
+              El proyecto BigScience nació en 2021 como una iniciativa de investigación abierta en inteligencia artificial. 
+              Su propósito era demostrar que la comunidad científica internacional podía crear un modelo de lenguaje 
+              masivo sin depender de empresas privadas ni restringir el acceso a la información.
+            </p>
+
+            <p>
+              A lo largo de 2021 y 2022, los equipos trabajaron en la recolección y curación de un gigantesco conjunto 
+              de datos multilingüe llamado <strong>ROOTS</strong>, compuesto por más de <strong>1,6 terabytes de texto limpio</strong> 
+              proveniente de más de 60 fuentes públicas (Wikipedia, GitHub, artículos científicos, noticias, etc.).
+              El entrenamiento se realizó en el supercomputador <strong>Jean Zay</strong> utilizando la arquitectura 
+              <strong>Transformer autoregresiva</strong>, similar a la empleada en GPT-3, pero con parámetros de transparencia 
+              y equidad lingüística.
+            </p>
+
+            <ul>
+              <li><strong>2021 (junio):</strong> Lanzamiento del taller colaborativo BigScience.</li>
+              <li><strong>2022 (enero–abril):</strong> Preparación del dataset ROOTS y pruebas de arquitectura.</li>
+              <li><strong>2022 (mayo–julio):</strong> Entrenamiento principal de BLOOM en Jean Zay.</li>
+              <li><strong>2022 (julio):</strong> Publicación del modelo BLOOM (176B) bajo licencia RAIL.</li>
+              <li><strong>2023:</strong> Creación de BLOOMZ, adaptado al seguimiento de instrucciones humanas.</li>
+            </ul>
+
+            <figure style="text-align:center;">
+              <img src="images/que-es-imagenes/lineaTiempo.jpeg" alt="Línea de tiempo del desarrollo de BLOOM" class="image main" style="width: 80%; display: block; margin: 0 auto;"/>
+              <figcaption>Línea de tiempo del proyecto BigScience y el desarrollo de BLOOM.</figcaption>
+            </figure>
+
+            <br/>
+            <br/>
+
+            <h2>Variantes del modelo</h2>
+            <p>
+              A partir del lanzamiento de BLOOM, el equipo de BigScience y Hugging Face desarrollaron diversas variantes 
+              adaptadas a distintos contextos de investigación. Entre ellas destaca <strong>BLOOMZ</strong>, 
+              una versión del modelo ajustada mediante <em>fine-tuning</em> en un conjunto de datos de instrucciones 
+              multilingües (<strong>xP3</strong> dataset), lo que le permite responder preguntas, traducir, resumir textos 
+              o seguir indicaciones en lenguaje natural. 
+            </p>
+
+            <p>
+              También existen versiones más pequeñas (como <strong>BLOOMZ-mt</strong> y <strong>BLOOM-560M</strong>), 
+              diseñadas para funcionar en entornos con recursos limitados, manteniendo la estructura multilingüe.
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Parámetros</th>
+                  <th>Descripción</th>
+                  <th>Disponibilidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>BLOOM</strong></td>
+                  <td>176B</td>
+                  <td>Modelo base multilingüe, autoregresivo y de acceso abierto.</td>
+                  <td><a href="https://huggingface.co/bigscience/bloom" target="_blank">Hugging Face</a></td>
+                </tr>
+                <tr>
+                  <td><strong>BLOOMZ</strong></td>
+                  <td>176B</td>
+                  <td>Versión adaptada para seguir instrucciones en múltiples idiomas.</td>
+                  <td><a href="https://huggingface.co/bigscience/bloomz" target="_blank">Hugging Face</a></td>
+                </tr>
+                <tr>
+                  <td><strong>BLOOMZ-mt</strong></td>
+                  <td>7.1B</td>
+                  <td>Versión más liviana, entrenada en tareas multilingües de traducción e inferencia.</td>
+                  <td><a href="https://huggingface.co/bigscience/bloomz-7b1-mt" target="_blank">Hugging Face</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Licencia: RAIL (Responsible AI License)</h2>
+
+            <p>
+              BLOOM está distribuido bajo la <strong>RAIL License (Responsible AI License)</strong>, 
+              una licencia creada por BigScience y Hugging Face para asegurar que la inteligencia artificial 
+              se use de forma ética y responsable. A diferencia de licencias tradicionales como MIT o Apache, 
+              la RAIL establece límites sobre cómo puede usarse el modelo.
+            </p>
+
+            <p>
+              La licencia permite su uso con fines <strong>educativos, académicos, investigativos y de desarrollo abierto</strong>. 
+              Sin embargo, prohíbe expresamente aplicaciones que puedan:
+            </p>
+
+            <ul>
+              <li>Discriminar personas o grupos por raza, género, religión o nacionalidad.</li>
+              <li>Difundir desinformación o manipular a la opinión pública.</li>
+              <li>Usarse con fines militares, vigilancia masiva o violación de privacidad.</li>
+            </ul>
+
+            <p>
+              En el contexto educativo, la licencia RAIL fomenta la formación ética en inteligencia artificial, 
+              ofreciendo un marco seguro para que docentes y estudiantes experimenten con modelos de lenguaje 
+              sin promover usos perjudiciales. 
+              Gracias a esta licencia, BLOOM se ha convertido en un referente para la <strong>IA abierta, inclusiva y responsable</strong>.
+            </p>
+
           </section>
         </div>
       </div>
