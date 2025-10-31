@@ -3,10 +3,7 @@
   <head>
     <title>Funcionamiento - Bloom AI</title>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="is-preload">
@@ -17,27 +14,100 @@
         <div class="inner">
           <!-- Header -->
           <header id="header">
-            <a href="index.html" class="logo"><strong>Bloom</strong> AI</a>
+            <a href="index.html" class="logo"><strong>BLOOM</strong> AI</a>
           </header>
 
           <!-- Content -->
           <section>
             <header class="main">
-              <h1>¿Cómo Funciona Bloom AI?</h1>
+              <h1>¿Cómo funciona BLOOM?</h1>
             </header>
 
-            <span class="image main"
-              ><img src="images/pic11.jpg" alt=""
-            /></span>
+            <p>
+              BLOOM (BigScience Large Open-science Open-access Multilingual Language Model) es un modelo de lenguaje
+              <strong>autoregresivo basado en la arquitectura Transformer</strong>. Fue desarrollado por más de mil investigadores
+              del proyecto BigScience, con el objetivo de crear un modelo abierto, transparente y multilingüe que sirviera como
+              alternativa colaborativa a los modelos propietarios como GPT-3.
+            </p>
+
+            <span class="image main" style="display:block; text-align:center;">
+              <img src="images/diagrama-bloom.jpg" 
+                  alt="Diagrama de funcionamiento de BLOOM" 
+                  style="max-width:500px; width:100%; height:auto; border-radius:10px; margin:auto;">
+            </span>
+
+            <p style="text-align:center; font-size:0.9em; color:#555;">
+              Figura 1. Arquitectura general del modelo BLOOM.
+            </p>
+            
+            <!-- Sección 1: Arquitectura -->
+            <h2>1. Arquitectura de BLOOM</h2>
+            <p>
+              BLOOM utiliza una arquitectura <strong>Transformer autoregresiva</strong>, similar a GPT-3, donde el modelo
+              predice el siguiente token (palabra o subpalabra) basándose en los anteriores. Cada capa contiene mecanismos de
+              <em>autoatención</em> y <em>feed-forward</em> que permiten al modelo capturar dependencias a largo plazo en los textos.
+            </p>
+            <p>
+              Su entrenamiento masivo implicó procesar billones de tokens y ajustar 176 mil millones de parámetros, lo que lo
+              convierte en uno de los modelos abiertos más grandes del mundo. BLOOM se entrenó en la <strong>supercomputadora Jean Zay</strong> de Francia, gracias a la colaboración internacional de la comunidad BigScience.
+            </p>
+
+            <!-- Sección 2: Dataset ROOTS -->
+            <h2>2. Dataset ROOTS</h2>
+            <p>
+              El conjunto de datos utilizado para entrenar BLOOM se llama <strong>ROOTS</strong>. Está compuesto por más de
+              <strong>1,6 terabytes de texto limpio</strong> en más de <strong>46 idiomas y 13 lenguajes de programación</strong>.
+              Su propósito fue garantizar una representación equitativa del multilingüismo y la diversidad cultural.
+            </p>
+            <p>
+              Los textos provienen de fuentes académicas, literatura, foros, artículos de noticias y contenido educativo.
+              Gracias a ROOTS, BLOOM puede comprender y generar textos coherentes en español, inglés, francés, portugués, árabe,
+              entre otros.
+            </p>
+
+            <!-- Sección 3: Proceso de generación -->
+            <h2>3. Proceso de Generación de Texto</h2>
+            <p>
+              BLOOM convierte las palabras en <em>tokens</em> (fragmentos numéricos) que luego son procesados por el modelo para
+              predecir los siguientes elementos de una oración. Este proceso ocurre en varias etapas:
+            </p>
+
+            <ul>
+              <li><strong>Prompt:</strong> el usuario escribe una instrucción o texto inicial.</li>
+              <li><strong>Tokenización:</strong> el texto se divide en tokens que representan palabras o subpalabras.</li>
+              <li><strong>Generación:</strong> el modelo predice el siguiente token más probable, uno a la vez.</li>
+              <li><strong>Decodificación:</strong> los tokens generados se transforman nuevamente en texto legible.</li>
+            </ul>
 
             <p>
-              Descubre las poderosas funcionalidades que hacen que Bloom AI se
-              destaque en el ámbito educativo.
+              Este flujo se puede representar en el siguiente esquema visual:
             </p>
+
+            <span class="image main" style="display:block; text-align:center;">
+              <img src="images/pipeline-bloom.jpg" 
+                  alt="Pipeline de generación de texto de BLOOM" 
+                  style="max-width: 500px; width:100%; height:auto; border-radius:10px; margin:auto;">
+            </span>
+
+            <p style="text-align:center; font-size:0.9em; color:#555;">
+              Figura 2. Flujo del proceso de generación de texto en BLOOM.
+            </p>
+
             <p>
-              Esta página presenta las características clave y capacidades de
-              nuestra plataforma de inteligencia artificial.
+              BLOOM aprende patrones lingüísticos complejos y los reproduce para generar texto coherente y contextual
+              a partir de cualquier entrada. Su enfoque multilingüe y abierto lo convierte en una herramienta clave para la
+              investigación, la educación y el desarrollo ético de la inteligencia artificial.
             </p>
+            <hr />
+
+            <h3>Fuentes oficiales</h3>
+            <ul>
+              <li><a href="https://huggingface.co/bigscience/bloom" target="_blank">Model Card: BLOOM (Hugging Face)</a></li>
+              <li><a href="https://huggingface.co/bigscience/bloomz" target="_blank">Model Card: BLOOMZ (Hugging Face)</a></li>
+              <li><a href="https://bigscience.huggingface.co/" target="_blank">Proyecto BigScience</a></li>
+              <li><a href="https://arxiv.org/abs/2211.05100" target="_blank">Paper: BLOOM (arXiv)</a></li>
+              <li><a href="https://huggingface.co/datasets/bigscience-data/roots" target="_blank">Dataset ROOTS</a></li>
+            </ul>
           </section>
         </div>
       </div>
@@ -53,11 +123,7 @@
             <ul>
               <li><a href="index.html">Inicio</a></li>
               <li><a href="que-es-bloom.html">Qué es</a></li>
-              <li>
-                <a href="como-funciona-bloom.html" class="active"
-                  >Funcionamiento</a
-                >
-              </li>
+              <li><a href="como-funciona-bloom.html" class="active">Funcionamiento</a></li>
               <li><a href="usos-y-riesgos.html">Usos</a></li>
               <li><a href="aportes-formacion.html">Formación</a></li>
             </ul>
@@ -75,55 +141,38 @@
                 </div>
                 <h4>Nombre Desarrollador 1</h4>
                 <span class="role">Desarrollador Full Stack</span>
-                <p>
-                  Apasionado por crear aplicaciones web escalables y explorar
-                  nuevas tecnologías.
-                </p>
-                <a href="https://github.com/developer1" class="github-link"
-                  >Perfil de GitHub</a
-                >
+                <p>Apasionado por crear aplicaciones web escalables y explorar nuevas tecnologías.</p>
+                <a href="https://github.com/developer1" class="github-link">Perfil de GitHub</a>
               </article>
+
               <article class="team-member">
                 <div class="team-image">
                   <img src="images/pic08.jpg" alt="Desarrollador 2" />
                 </div>
                 <h4>Nombre Desarrollador 2</h4>
                 <span class="role">Desarrollador Frontend</span>
-                <p>
-                  Especializado en crear interfaces de usuario hermosas e
-                  intuitivas con frameworks modernos.
-                </p>
-                <a href="https://github.com/developer2" class="github-link"
-                  >Perfil de GitHub</a
-                >
+                <p>Especializado en crear interfaces de usuario hermosas e intuitivas con frameworks modernos.</p>
+                <a href="https://github.com/developer2" class="github-link">Perfil de GitHub</a>
               </article>
+
               <article class="team-member">
                 <div class="team-image">
                   <img src="images/pic09.jpg" alt="Desarrollador 3" />
                 </div>
                 <h4>Nombre Desarrollador 3</h4>
                 <span class="role">Desarrollador Backend</span>
-                <p>
-                  Experto en desarrollo del lado del servidor y diseño de
-                  arquitectura de bases de datos.
-                </p>
-                <a href="https://github.com/developer3" class="github-link"
-                  >Perfil de GitHub</a
-                >
+                <p>Experto en desarrollo del lado del servidor y diseño de arquitectura de bases de datos.</p>
+                <a href="https://github.com/developer3" class="github-link">Perfil de GitHub</a>
               </article>
+
               <article class="team-member">
                 <div class="team-image">
                   <img src="images/pic01.jpg" alt="Desarrollador 4" />
                 </div>
                 <h4>Nombre Desarrollador 4</h4>
                 <span class="role">Ingeniero DevOps</span>
-                <p>
-                  Enfocado en automatización, pipelines CI/CD y gestión de
-                  infraestructura en la nube.
-                </p>
-                <a href="https://github.com/developer4" class="github-link"
-                  >Perfil de GitHub</a
-                >
+                <p>Enfocado en automatización, pipelines CI/CD y gestión de infraestructura en la nube.</p>
+                <a href="https://github.com/developer4" class="github-link">Perfil de GitHub</a>
               </article>
             </div>
           </section>
@@ -131,7 +180,7 @@
           <!-- Footer -->
           <footer id="footer">
             <p class="copyright">
-              &copy; Bloom AI. Todos los derechos reservados.
+              &copy; 2025 Bloom AI. Desarrollado por el equipo BigScience.
             </p>
           </footer>
         </div>
