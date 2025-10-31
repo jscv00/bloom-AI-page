@@ -76,18 +76,47 @@
               y equidad lingüística.
             </p>
 
-            <ul>
-              <li><strong>2021 (junio):</strong> Lanzamiento del taller colaborativo BigScience.</li>
-              <li><strong>2022 (enero–abril):</strong> Preparación del dataset ROOTS y pruebas de arquitectura.</li>
-              <li><strong>2022 (mayo–julio):</strong> Entrenamiento principal de BLOOM en Jean Zay.</li>
-              <li><strong>2022 (julio):</strong> Publicación del modelo BLOOM (176B) bajo licencia RAIL.</li>
-              <li><strong>2023:</strong> Creación de BLOOMZ, adaptado al seguimiento de instrucciones humanas.</li>
-            </ul>
+            <div class="timeline">
+              <div class="event left">
+                <div class="event-content">
+                  <div class="icon">🌍</div>
+                  <strong>Junio 2021:</strong> 
+                  <p>Lanzamiento del taller colaborativo <em>BigScience</em>, una iniciativa global para democratizar la IA.</p>
+                </div>
+              </div>
 
-            <figure style="text-align:center;">
-              <img src="images/que-es-imagenes/lineaTiempo.jpeg" alt="Línea de tiempo del desarrollo de BLOOM" class="image main" style="width: 80%; display: block; margin: 0 auto;"/>
-              <figcaption>Línea de tiempo del proyecto BigScience y el desarrollo de BLOOM.</figcaption>
-            </figure>
+              <div class="event right">
+                <div class="event-content">
+                  <div class="icon">💾</div>
+                  <strong>Enero–Abril 2022:</strong> 
+                  <p>Preparación del gigantesco dataset <strong>ROOTS</strong>, con más de 1,6 TB de texto limpio en múltiples idiomas.</p>
+                </div>
+              </div>
+
+              <div class="event left">
+                <div class="event-content">
+                  <div class="icon">⚙️</div>
+                  <strong>Mayo–Julio 2022:</strong> 
+                  <p>Entrenamiento principal de <strong>BLOOM</strong> en el supercomputador <em>Jean Zay</em> utilizando la arquitectura <em>Transformer</em>.</p>
+                </div>
+              </div>
+
+              <div class="event right">
+                <div class="event-content">
+                  <div class="icon">🚀</div>
+                  <strong>Julio 2022:</strong> 
+                  <p>Publicación oficial de <strong>BLOOM (176B)</strong> bajo la licencia abierta <em>RAIL</em>, marcando un hito en la IA colaborativa.</p>
+                </div>
+              </div>
+
+              <div class="event left">
+                <div class="event-content">
+                  <div class="icon">🤖</div>
+                  <strong>2023:</strong> 
+                  <p>Lanzamiento de <strong>BLOOMZ</strong>, versión mejorada que aprende a seguir instrucciones humanas.</p>
+                </div>
+              </div>
+            </div>
 
             <br/>
             <br/>
@@ -266,5 +295,21 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      // ✨ Animación suave al hacer scroll
+      const events = document.querySelectorAll('.event');
+      function showEvents() {
+        const trigger = window.innerHeight * 0.8;
+        events.forEach(event => {
+          const top = event.getBoundingClientRect().top;
+          if (top < trigger) event.classList.add('visible');
+        });
+      }
+      window.addEventListener('scroll', showEvents);
+      showEvents();
+    </script>
+
+
   </body>
 </html>
