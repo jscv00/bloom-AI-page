@@ -2321,3 +2321,104 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+
+
+/* 🌈 LÍNEA DE TIEMPO INTERACTIVA COLORIDA */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(180deg, #5a2ed6, #ff7ad9, #00c9a7);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 4px;
+}
+
+.event {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.event.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.left { left: 0; text-align: right; }
+.right { left: 50%; }
+
+.event::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #5a2ed6;
+  z-index: 1;
+}
+
+.left::after { right: -13px; }
+.right::after { left: -13px; }
+
+.event-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+}
+
+.event-content:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.event-content strong {
+  color: #5a2ed6;
+  font-size: 1.1rem;
+}
+
+.event-content p {
+  margin-top: 0.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 🔸 ICONO INTERNO */
+.icon {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* 🎵 Animación del icono */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* 📱 RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .timeline::after { left: 10px; }
+  .event { width: 100%; padding-left: 2.5rem; text-align: left; }
+  .event::after { left: 0; }
+  .left, .right { left: 0; }
+}
