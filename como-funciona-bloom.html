@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Funcionamiento - Bloom AI</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Funcionamiento - Bloom AI</title>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .highlight {
+        background: #eef6ff;
+        border-left: 4px solid #4a90e2;
+        padding: 1em;
+        border-radius: 8px;
+        margin-bottom: 1em;
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1em;
+        margin: 2em 0;
+      }
+
+      .fact-box {
+        background: #f7faff;
+        border: 1px solid #d0e2ff;
+        border-radius: 12px;
+        text-align: center;
+        padding: 1em;
+        transition: transform 0.2s ease;
+      }
+
+      .fact-box:hover {
+        transform: scale(1.05);
+        background: #e8f2ff;
+      }
+
+      iframe {
+        border-radius: 10px;
+        width: 100%;
+        max-width: 720px;
+        height: 405px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .image.main img {
+        transition: transform 0.3s ease;
+      }
+
+      .image.main img:hover {
+        transform: scale(1.03);
+      }
+    </style>
   </head>
+
   <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
@@ -17,88 +66,92 @@
             <a href="index.html" class="logo"><strong>BLOOM</strong> AI</a>
           </header>
 
-          <!-- Content -->
+          <!-- Contenido -->
           <section>
             <header class="main">
               <h1>¿Cómo funciona BLOOM?</h1>
             </header>
 
-            <p>
-              BLOOM (BigScience Large Open-science Open-access Multilingual Language Model) es un modelo de lenguaje
-              <strong>autoregresivo basado en la arquitectura Transformer</strong>. Fue desarrollado por más de mil investigadores
-              del proyecto BigScience, con el objetivo de crear un modelo abierto, transparente y multilingüe que sirviera como
-              alternativa colaborativa a los modelos propietarios como GPT-3.
+            <p class="highlight">
+              <strong>BLOOM</strong> (BigScience Large Open-science Open-access Multilingual Language Model) es un modelo de
+              lenguaje <strong>autoregresivo basado en la arquitectura Transformer</strong>. Fue desarrollado por más de
+              <strong>1.000 investigadores</strong> del proyecto BigScience, con el objetivo de crear una IA abierta, transparente
+              y multilingüe que sirviera como alternativa ética a modelos cerrados como GPT-3.
             </p>
 
-            <span class="image main" style="display:block; text-align:center;">
+            <!-- Imagen 1 -->
+            <div class="image main" style="text-align:center; margin-bottom:1.5em;">
+              <p style="font-weight:bold; text-align:center; color:#333; margin-bottom:0.5em;">
+                Arquitectura general de BLOOM
+              </p>
               <img src="images/diagrama-bloom.jpg" 
                   alt="Diagrama de funcionamiento de BLOOM" 
-                  style="max-width:500px; width:100%; height:auto; border-radius:10px; margin:auto;">
-            </span>
+                  style="max-width:550px; width:100%; border-radius:10px; margin:auto;" />
+            </div>
 
-            <p style="text-align:center; font-size:0.9em; color:#555;">
-              Figura 1. Arquitectura general del modelo BLOOM.
-            </p>
-            
-            <!-- Sección 1: Arquitectura -->
+            <!-- Bloque de datos clave -->
+            <div class="facts">
+              <div class="fact-box">
+                🧠 <br /><strong>176 mil millones</strong><br />de parámetros entrenados
+              </div>
+              <div class="fact-box">
+                🌍 <br /><strong>46 idiomas</strong><br />y 13 lenguajes de programación
+              </div>
+              <div class="fact-box">
+                ⚙️ <br />Entrenado en <strong>Jean Zay</strong><br />supercomputadora francesa
+              </div>
+              <div class="fact-box">
+                🤝 <br />Proyecto <strong>colaborativo global</strong><br />de la comunidad BigScience
+              </div>
+            </div>
+
+            <!-- Sección 1 -->
             <h2>1. Arquitectura de BLOOM</h2>
             <p>
-              BLOOM utiliza una arquitectura <strong>Transformer autoregresiva</strong>, similar a GPT-3, donde el modelo
-              predice el siguiente token (palabra o subpalabra) basándose en los anteriores. Cada capa contiene mecanismos de
-              <em>autoatención</em> y <em>feed-forward</em> que permiten al modelo capturar dependencias a largo plazo en los textos.
+              BLOOM utiliza una arquitectura <strong>Transformer autoregresiva</strong>, donde el modelo predice el siguiente
+              token (palabra o subpalabra) basándose en los anteriores. Cada capa contiene mecanismos de
+              <em>autoatención</em> y <em>feed-forward</em> que le permiten comprender dependencias a largo plazo en los textos.
             </p>
             <p>
-              Su entrenamiento masivo implicó procesar billones de tokens y ajustar 176 mil millones de parámetros, lo que lo
-              convierte en uno de los modelos abiertos más grandes del mundo. BLOOM se entrenó en la <strong>supercomputadora Jean Zay</strong> de Francia, gracias a la colaboración internacional de la comunidad BigScience.
+              El modelo fue entrenado con una infraestructura de <strong>384 GPUs NVIDIA A100</strong> en la supercomputadora
+              <strong>Jean Zay</strong>, durante más de tres meses, procesando billones de tokens y ajustando los parámetros del
+              modelo de manera colaborativa.
             </p>
 
-            <!-- Sección 2: Dataset ROOTS -->
+            <!-- Sección 2 -->
             <h2>2. Dataset ROOTS</h2>
             <p>
-              El conjunto de datos utilizado para entrenar BLOOM se llama <strong>ROOTS</strong>. Está compuesto por más de
-              <strong>1,6 terabytes de texto limpio</strong> en más de <strong>46 idiomas y 13 lenguajes de programación</strong>.
-              Su propósito fue garantizar una representación equitativa del multilingüismo y la diversidad cultural.
+              El conjunto de datos <strong>ROOTS</strong> contiene más de <strong>1,6 TB</strong> de texto en más de
+              <strong>46 idiomas</strong> y <strong>13 lenguajes de programación</strong>. Este dataset fue diseñado para
+              representar la diversidad cultural y lingüística del mundo digital.
             </p>
             <p>
-              Los textos provienen de fuentes académicas, literatura, foros, artículos de noticias y contenido educativo.
-              Gracias a ROOTS, BLOOM puede comprender y generar textos coherentes en español, inglés, francés, portugués, árabe,
-              entre otros.
+              Incluye textos de literatura, artículos científicos, código abierto y recursos educativos, garantizando que BLOOM
+              sea capaz de generar respuestas inclusivas, coherentes y éticas.
             </p>
 
-            <!-- Sección 3: Proceso de generación -->
-            <h2>3. Proceso de Generación de Texto</h2>
+            <!-- Sección 3 -->
+            <h2>3. Proceso de generación de texto</h2>
             <p>
-              BLOOM convierte las palabras en <em>tokens</em> (fragmentos numéricos) que luego son procesados por el modelo para
-              predecir los siguientes elementos de una oración. Este proceso ocurre en varias etapas:
+              BLOOM convierte las palabras en <em>tokens</em> (fragmentos numéricos) que luego son procesados para generar texto.
+              Su flujo general incluye:
             </p>
 
             <ul>
               <li><strong>Prompt:</strong> el usuario escribe una instrucción o texto inicial.</li>
-              <li><strong>Tokenización:</strong> el texto se divide en tokens que representan palabras o subpalabras.</li>
-              <li><strong>Generación:</strong> el modelo predice el siguiente token más probable, uno a la vez.</li>
-              <li><strong>Decodificación:</strong> los tokens generados se transforman nuevamente en texto legible.</li>
+              <li><strong>Tokenización:</strong> el texto se divide en tokens (subpalabras).</li>
+              <li><strong>Generación:</strong> el modelo predice token por token de forma secuencial.</li>
+              <li><strong>Decodificación:</strong> los tokens se transforman nuevamente en texto legible.</li>
             </ul>
 
-            <p>
-              Este flujo se puede representar en el siguiente esquema visual:
-            </p>
-
-            <span class="image main" style="display:block; text-align:center;">
+            <div class="image main" style="text-align:center; margin-bottom:1.5em;">
+              <p style="font-weight:bold; text-align:center; color:#333; margin-bottom:0.5em;">
+                Flujo de generación de texto en BLOOM
+              </p>
               <img src="images/pipeline-bloom.jpg" 
-                  alt="Pipeline de generación de texto de BLOOM" 
-                  style="max-width: 500px; width:100%; height:auto; border-radius:10px; margin:auto;">
-            </span>
-
-            <p style="text-align:center; font-size:0.9em; color:#555;">
-              Figura 2. Flujo del proceso de generación de texto en BLOOM.
-            </p>
-
-            <p>
-              BLOOM aprende patrones lingüísticos complejos y los reproduce para generar texto coherente y contextual
-              a partir de cualquier entrada. Su enfoque multilingüe y abierto lo convierte en una herramienta clave para la
-              investigación, la educación y el desarrollo ético de la inteligencia artificial.
-            </p>
-            <hr />
+                  alt="Pipeline de BLOOM" 
+                  style="max-width:550px; width:100%; border-radius:10px; margin:auto;" />
+            </div>
 
             <h3>Fuentes oficiales</h3>
             <ul>
